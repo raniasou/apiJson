@@ -1,0 +1,24 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "test no",
+      "lastName": "test"
+    },
+    {
+      "firstName": "Groupe D",
+      "lastName": "Lundi",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Rania",
+      "lastName": "soussi"
+    },
+    {
+      "firstName": "ghjxcxc",
+      "lastName": "fghj",
+      "id": 4
+    }
+  ]
+}

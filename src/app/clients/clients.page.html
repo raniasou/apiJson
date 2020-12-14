@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="addClient()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Clients</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients, let i = index">
+          <td>{{ client.id }}</td>
+          <td>{{ client.firstName }}</td>
+          <td>{{ client.lastName }}</td>
+          <td style="display: flex">
+            <ion-button color="warning" size="small" routerLink='/update-client/{{client.id}}'>
+              <ion-icon name="create"></ion-icon>
+            </ion-button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ion-item *ngIf="clients &&  clients.length ===0" class="ion-no-padding">
+      <ion-label>
+        No Clients
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
